@@ -1,0 +1,15 @@
+{
+  "incremental": true,
+  "indentWidth": 2,
+  "lineWidth": 120,
+  "typescript": {
+    "arrowFunction.useParentheses": "force",
+    "quoteProps": "asNeeded",
+    "semiColons": "asi"
+  },
+  "plugins": [
+    "https://plugins.dprint.dev/g-plane/markup_fmt-v0.13.1.wasm",
+    "https://plugins.dprint.dev/json-0.19.3.wasm",
+    "https://plugins.dprint.dev/typescript-0.93.0.wasm"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "exclude": ["dist"],
+  "tasks": {
+    "www": "deno run -A npm:vite",
+    "www:build": "deno run -A npm:vite build --emptyOutDir"
+  },
+  "imports": {
+    "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.0",
+    "@types/react": "npm:@types/react@^18.3.11",
+    "@types/react-dom": "npm:@types/react-dom@^18.3.1",
+    "@vitejs/plugin-react-swc": "npm:@vitejs/plugin-react-swc@^3.7.1",
+    "react": "https://esm.sh/react@18.3.1",
+    "react/": "https://esm.sh/react@18.3.1/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+    "vite": "npm:vite@^5.4.8"
+  },
+  "lint": {
+    "rules": {
+      "include": ["ban-untagged-todo", "guard-for-in"],
+      "exclude": [
+        "ban-types",
+        "ban-untagged-todo",
+        "no-empty",
+        "no-explicit-any",
+        "no-inner-declarations",
+        "no-namespace"
+      ]
+    }
+  },
+  "compilerOptions": {
+    "lib": ["deno.window", "dom"],
+    "noFallthroughCasesInSwitch": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  }
+}
